@@ -10,10 +10,16 @@ function isElementInViewport(el) {
 
 function animateOnScroll() {
     const joinBox = document.getElementById('join-box');
-    if (isElementInViewport(joinBox)) {
+
+    if (isElementInViewport(joinBox) && !joinBox.classList.contains('active')) {
         joinBox.classList.add('active');
-        window.removeEventListener('scroll', animateOnScroll);
     }
 }
 
+function animateHeaderOnLoad() {
+    const header = document.querySelector('header');
+    header.classList.add('active');
+}
+
+document.addEventListener('DOMContentLoaded', animateHeaderOnLoad);
 window.addEventListener('scroll', animateOnScroll);

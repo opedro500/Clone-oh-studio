@@ -24,7 +24,7 @@ body {
 }
 
 body > :not(:first-child) {
-    margin-top: 200px;
+    margin-top: 220px;
 }
 
 a {
@@ -89,6 +89,18 @@ header ul {
     gap: 10px;
 }
 
+header .pre-animation {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out 0.5s, transform 0.6s ease-out 0.5s;
+}
+
+header.active div h1,
+header.active ul {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 header li {
     list-style: none;
     display: flex;
@@ -118,7 +130,7 @@ header li {
     overflow: hidden;
     border-radius: 10px;
     margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--color-dark-900);
 }
 
 .generic-image-box img {
@@ -131,6 +143,7 @@ header li {
 
 .generic-image-box:hover img {
     filter: blur(8px);
+    opacity: 75%;
 }
 
 .image-overlay {
@@ -142,7 +155,7 @@ header li {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    color: white;
+    color: var(--color-light-0);
     opacity: 0;
     transition: opacity 0.2s ease;
 }
@@ -194,7 +207,7 @@ header li {
     font-weight: 400;
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: opacity 0.6s ease-out 0.3s, transform 0.6s ease-out 0.3s;
 }
 
 #join-box.active h2 {

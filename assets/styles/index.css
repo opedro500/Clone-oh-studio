@@ -40,7 +40,7 @@ body {
     background-color: var(--color-light-0);
 }
 
-body > :not(:first-child) {
+body > :not(:first-child):not(:nth-child(2)):not(:nth-child(3)) {
     margin-top: 220px;
 }
 
@@ -48,7 +48,7 @@ a {
     text-decoration: none;
 }
 
-#pages-navegation {
+#pages-navegation-box {
     margin-top: 30px;
     display: flex;
     justify-content: center;
@@ -59,7 +59,7 @@ a {
     z-index: 1000;
 }
 
-#pages-navegation ul {
+#pages-navegation-box ul {
     display: flex;
     background-color: var(--color-light-400);
     padding: 4px;
@@ -68,7 +68,7 @@ a {
     backdrop-filter: blur(10px);
 }
 
-#pages-navegation ul li {
+#pages-navegation-box ul li {
     padding: 10px 30px;
     border-radius: 40px;
 }
@@ -77,12 +77,45 @@ a {
     background-color: var(--color-light-0);
 }
 
-#pages-navegation ul li a {
+#pages-navegation-box ul li a {
     font-size: 0.8rem;
     color: var(--color-dark-900);
 }
 
+#darkmode-button-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#darkmode-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background-color: var(--color-light-400);
+}
+
+#darkmode-button button {
+    background-color: transparent;
+    color: var(--color-dark-900);
+    border: none;
+    font-size: 1.1rem;
+    transition: transform 0.1s linear;
+    width: 70%;
+    height: 70%;
+}
+
+#darkmode-button button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 header {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -40,6 +40,11 @@ body {
     background-color: var(--color-light-0);
 }
 
+.body-darkmode {
+    color: var(--color-light-200);
+    background-color: var(--color-dark-700);
+}
+
 body > :not(:first-child):not(:nth-child(2)):not(:nth-child(3)) {
     margin-top: 220px;
 }
@@ -77,6 +82,14 @@ a {
     background-color: var(--color-light-0);
 }
 
+.in-home-darkmode {
+    background-color: var(--color-light-200) !important;
+}
+
+.not-in-home-link-darkmode {
+    color: var(--color-light-200) !important;
+}
+
 #pages-navegation-box ul li a {
     font-size: 0.8rem;
     color: var(--color-dark-900);
@@ -112,6 +125,10 @@ a {
 #darkmode-button button:hover {
     cursor: pointer;
     transform: scale(1.1);
+}
+
+.button-toggle-darkmode {
+    color: var(--color-light-200) !important;
 }
 
 header {
@@ -290,12 +307,20 @@ footer {
     gap: 16px;
 }
 
-#social-medias-navegation ul li a {
+.social-media-link {
     color: var(--color-dark-900);
 }
 
-#social-medias-navegation ul li a:hover {
+.social-media-link:hover {
     color: var(--color-light-700);
+}
+
+.social-media-link-darkmode {
+    color: var(--color-light-200) !important;
+}
+
+.social-media-link-darkmode:hover {
+    color: var(--color-light-400) !important;
 }
 
 @media screen and (max-width: 810px) {

@@ -2,9 +2,26 @@
 
 :root {
     --color-light-0: #ffffff;
+
+    /* Cor do texto principal darkmode */
+    --color-light-200: #F5F5F5;
+
+    /* Substituição darkmode */
     --color-light-400: #e8e5e480;
+    --color-light-500: #4B4B4B80;
+    
     --color-light-600: #a7a6a6;
+
+    /* Cor do texto secundário darkmode */
+    --color-light-650: #A9A9A9;
+
     --color-light-700: #7f7f7f;
+
+    /* Cor de links e botões darkmode */
+    --color-light-750: #A9A9A980;
+
+    /* Cor do body darkmode */
+    --color-dark-700: #1C1C1C;
 
     --color-dark-900: #000000;
 }
@@ -20,7 +37,7 @@ body {
     flex-direction: column;
     font-family: 'Mona Sans', sans-serif;
     color: var(--color-dark-900);
-    
+    background-color: var(--color-light-0);
 }
 
 body > :not(:first-child) {
@@ -117,16 +134,17 @@ header li {
 
 #generic-images {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 600px));
     gap: 20px;
+    justify-content: center;
     justify-items: center;
-    padding: 0px 15vw;
+    padding: 0px 40px;
 }
 
 .generic-image-box {
     position: relative;
     width: 100%;
-    height: 510px;
+    aspect-ratio: 1.3;
     overflow: hidden;
     border-radius: 10px;
     margin-top: 20px;
@@ -245,4 +263,11 @@ footer {
 
 #social-medias-navegation ul li a:hover {
     color: var(--color-light-700);
+}
+
+@media screen and (max-width: 810px) {
+    #generic-images {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0px 20px;
+    }
 }

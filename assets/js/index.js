@@ -34,6 +34,7 @@ const notInHomeLinks = document.querySelectorAll('.not-in-home-link');
 
 darkModeToggle.addEventListener('click', () => {
     document.body.classList.toggle('body-darkmode'); 
+    
     inHome.classList.toggle('in-home-darkmode');
 
     notInHomeLinks.forEach(notInHomeLink => {

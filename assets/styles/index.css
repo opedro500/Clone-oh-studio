@@ -311,7 +311,7 @@ footer {
 
 @media screen and (max-width: 810px) {
     header div {
-        width: 65vw;
+        width: 80vw;
     }
 
     header div h1 {
@@ -321,5 +321,12 @@ footer {
     #generic-images {
         grid-template-columns: repeat(1, 1fr);
         padding: 0px 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    footer {
+        flex-direction: column-reverse;
+        gap: 20px;
     }
 }

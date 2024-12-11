@@ -25,12 +25,11 @@ function animateHeaderOnLoad() {
 document.addEventListener('DOMContentLoaded', animateHeaderOnLoad);
 window.addEventListener('scroll', animateOnScroll);
 
-
 // Darkmode logic
 const darkModeToggle = document.getElementById('darkmode-toggle');
 const inHome = document.getElementById('in-home');
-const socialMediaLinks = document.querySelectorAll('.social-media-link');
 const notInHomeLinks = document.querySelectorAll('.not-in-home-link');
+const socialMediaLinks = document.querySelectorAll('.social-media-link');
 
 darkModeToggle.addEventListener('click', () => {
     document.body.classList.toggle('body-darkmode'); 

@@ -2,6 +2,10 @@
 
 Este é um projeto pessoal que consiste no clone da página inicial do site [oh.studio](https://oh.studio). O objetivo principal deste projeto foi aprimorar minhas habilidades em **frontend**, replicando o design e funcionalidade do site original, ao mesmo tempo que implementei uma feature adicional de **Dark Mode** para proporcionar uma experiência mais personalizada e confortável para os usuários.
 
+## Como rodar o projeto?
+
+Basta acessá-lo pelo link: [https://clone-oh-studio-five.vercel.app/](https://clone-oh-studio-five.vercel.app/)
+
 ## Objetivo
 
 Este projeto foi desenvolvido com o intuito de:

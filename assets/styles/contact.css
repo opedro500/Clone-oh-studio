@@ -186,6 +186,18 @@ footer {
     color: var(--color-light-400) !important;
 }
 
+@media screen and (max-width: 1200px) {
+    #join-box h2 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #join-box h2 {
+        font-size: 2.1rem;
+    }
+}
+
 @media screen and (max-width: 400px) {
     footer {
         flex-direction: column-reverse;

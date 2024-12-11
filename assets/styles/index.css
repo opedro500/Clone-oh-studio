@@ -315,12 +315,17 @@ footer {
 }
 
 @media screen and (max-width: 810px) {
+    body > :not(:first-child):not(:nth-child(2)):not(:nth-child(3)) {
+        margin-top: 150px;
+    }
+
     header div {
-        width: 80vw;
+        padding: 0px 30px;
+        width: 100%;
     }
 
     header div h1 {
-        font-size: 2.8rem;
+        font-size: 2.3rem;
     }
 
     #generic-images {

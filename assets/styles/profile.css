@@ -20,6 +20,7 @@
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
     font-family: 'Mona Sans', sans-serif;
     color: var(--color-dark-900);
     background-color: var(--color-light-0);
@@ -28,10 +29,6 @@ body {
 .body-darkmode {
     color: var(--color-light-200);
     background-color: var(--color-dark-700);
-}
-
-body > :not(:first-child):not(:nth-child(2)):not(:nth-child(3)) {
-    margin-top: 220px;
 }
 
 a {
@@ -68,15 +65,15 @@ a {
     border-radius: 40px;
 }
 
-#in-home {
+#in-profile {
     background-color: var(--color-light-0);
 }
 
-.in-home-darkmode {
+.in-profile-darkmode {
     background-color: var(--color-light-200) !important;
 }
 
-.not-in-home-link-darkmode {
+.not-in-profile-link-darkmode {
     color: var(--color-light-200) !important;
 }
 
@@ -122,16 +119,11 @@ a {
 }
 
 header {
-    margin-top: 60px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-}
-
-header div {
-    width: 700px;
+    height: 70vh;
+    padding: 0px 30px;
 }
 
 header div h1 {
@@ -140,36 +132,15 @@ header div h1 {
     text-align: center;
 }
 
-header ul {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-}
-
 header .pre-animation {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-out 0.5s, transform 0.6s ease-out 0.5s;
 }
 
-header.active div h1,
-header.active ul {
+header.active div h1 {
     opacity: 1;
     transform: translateY(0);
-}
-
-header li {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.8rem;
-}
-
-.not-expertise {
-    border-radius: 40px;
-    padding: 8px 10px;
-    background-color: var(--color-light-400);
 }
 
 #generic-images {
@@ -196,61 +167,120 @@ header li {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    transition: filter 0.3s ease;
 }
 
-.generic-image-box:hover img {
-    filter: blur(8px);
-    opacity: 75%;
-}
-
-.image-overlay {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
+.generic-info-box {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    color: var(--color-light-0);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.generic-info-box ul {
+    list-style: none;
+}
+
+.generic-info-box li {
+    font-size: 0.8rem;
+    border-radius: 40px;
+    padding: 8px 10px;
+    background-color: var(--color-light-400);
+}
+
+.generic-info-box h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#about-box {
+    padding: 160px 30px;
+    width: 700px;
+}
+
+#about-box ul, #about-box h3 {
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transform: translateY(40px);
 }
 
-.generic-image-box:hover .image-overlay {
+#about-box ul {
+    transition: opacity 0.6s ease-out 0.3s, transform 0.6s ease-out 0.3s;
+}
+
+#about-box h3 {
+    transition: opacity 0.6s ease-out 0.4s, transform 0.6s ease-out 0.4s;
+}
+
+#about-box.active ul, #about-box.active h3 {
     opacity: 1;
+    transform: translateY(0);
 }
 
-.image-label {
-    font-size: 1.25rem;
+#where-worked-box {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 430px));
+    justify-content: center;
+    justify-items: center;
+    padding: 45px;
+    gap: 10px;
 }
 
-.image-btn {
-    width: 45px;
-    height: 45px;
-    background-color: var(--color-light-0);
-    color: var(--color-dark-900);
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    border-radius: 100%;
-}
-
-.locked .image-overlay .lock-icon {
+#where-worked-box ul {
+    height: 25vh;
+    list-style: none;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 45px;
-    height: 45px;
-    background-color: var(--color-light-0);
-    color: var(--color-dark-900);
-    font-size: 1.1rem;
-    border-radius: 100%;
+    gap: 24px;
 }
 
-#coming-soon {
+.where-worked-infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.where-worked-infos li {
+    font-size: 0.9rem;
     color: var(--color-light-700);
+}
+
+.where-worked-infos .initiative-worked {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-dark-900);
+}
+
+.where-worked-infos .initiative-worked-darkmode {
+    color: var(--color-light-200);
+}
+
+.type-work {
+    font-size: 0.8rem;
+    border-radius: 40px;
+    padding: 8px 10px;
+    background-color: var(--color-light-400);
+}
+
+#worked-with-box {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 350px));
+    justify-content: center;
+    justify-items: center;
+    padding: 45px;
+    gap: 10px;
+}
+
+.worked-with-element {
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    font-size: 3rem;
 }
 
 #join-box {
@@ -258,6 +288,7 @@ header li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 45vh;
 }
 
 #join-box h2, #join-box h3 {
@@ -265,15 +296,14 @@ header li {
     font-weight: 400;
     text-align: center;
     opacity: 0;
+    transform: translateY(40px);
 }
 
 #join-box h2 {
-    transform: translateY(40px);
     transition: opacity 0.6s ease-out 0.3s, transform 0.6s ease-out 0.3s;
 }
 
 #join-box h3 {
-    transform: translateY(40px);
     transition: opacity 0.6s ease-out 0.4s, transform 0.6s ease-out 0.4s;
 }
 
@@ -291,6 +321,7 @@ header li {
 }
 
 footer {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -322,27 +353,56 @@ footer {
     color: var(--color-light-400) !important;
 }
 
+@media screen and (max-width: 1200px) {
+    header {
+        height: 50vh;
+    }
+}
+
 @media screen and (max-width: 810px) {
-    body > :not(:first-child):not(:nth-child(2)):not(:nth-child(3)) {
-        margin-top: 150px;
-    }
-
-    header div {
-        padding: 0px 30px;
-        width: 100%;
-    }
-
     header div h1 {
-        font-size: 2.3rem;
+        font-size: 3.1rem;
     }
 
     #generic-images {
         grid-template-columns: repeat(1, 1fr);
         padding: 0px 20px;
     }
+
+    .generic-info-box h3 {
+        font-size: 1.5rem;
+    }
+
+    #about-box {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    #about-box {
+        padding: 100px 30px;
+    }
+
+    #where-worked-box {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #worked-with-box {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width: 400px) {
+    header {
+        height: 40vh;
+    }
+
+    header div h1 {
+        font-size: 2.6rem;
+    }
+
     footer {
         flex-direction: column-reverse;
         gap: 20px;

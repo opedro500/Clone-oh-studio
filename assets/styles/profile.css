@@ -222,8 +222,9 @@ header.active div h1 {
     grid-template-columns: repeat(3, minmax(0, 430px));
     justify-content: center;
     justify-items: center;
-    padding: 45px;
-    gap: 10px;
+    padding: 45px 45px 100px 45px;
+    column-gap: 10px;
+    row-gap: 40px;
 }
 
 .where-worked-element {
@@ -271,7 +272,7 @@ header.active div h1 {
     grid-template-columns: repeat(4, minmax(0, 350px));
     justify-content: center;
     justify-items: center;
-    padding: 45px;
+    padding: 10px 45px;
     gap: 10px;
 }
 
